@@ -3,9 +3,17 @@ package com.app.tareaioc;
 public class App {
 	
 	public static void main(String[] args) {
-	UsuarioFactory obj = new UsuarioFactory();
-	obj.getInsertarUsuario();
-	obj.getEliminarUsuario(0);
+		
+	UsuarioFactory objOracle = new UsuarioFactory(new UsuarioImplOracle());
+	
+	objOracle.getInsertarUsuario();
+	objOracle.getEliminarUsuario(0);
+	
+	UsuarioFactory objMongo = new UsuarioFactory(new UsuarioImplMongo());
+	
+	objMongo.getInsertarUsuario();
+	objMongo.getEliminarUsuario(1);
+	
 	}
 	
 }
