@@ -1,15 +1,16 @@
 package com.app.tareaioc;
 
-public class UsuarioImplOracle implements IUsuario{
+/**This class implements the interface Iusuario to implement the IoC*/
+public class UserImplOracle implements IUser{
 
 	@Override
-	public void insertarUsuario() {
+	public void insertUser() {
 		System.out.println("Insertando usuario en Oracle.");
 		
 	}
 
 	@Override
-	public void eliminarUsuario(int id) {
+	public void deleteUser(int id) {
 		System.out.println("Eliminando usuario " + id + " de Oracle.");
 		
 	}

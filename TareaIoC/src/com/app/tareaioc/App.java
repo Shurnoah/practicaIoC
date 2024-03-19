@@ -1,18 +1,21 @@
 package com.app.tareaioc;
 
+/** Class main*/
 public class App {
 	
 	public static void main(String[] args) {
 		
-	UsuarioFactory objOracle = new UsuarioFactory(new UsuarioImplOracle());
+	// call to UsuarioImplOracle
+	UserFactory objOracle = new UserFactory(new UserImplOracle());
 	
-	objOracle.getInsertarUsuario();
-	objOracle.getEliminarUsuario(0);
+	objOracle.getInsertrUser();
+	objOracle.getDeleteUser(0);
 	
-	UsuarioFactory objMongo = new UsuarioFactory(new UsuarioImplMongo());
+	// call to UsuarioImplMongo
+	UserFactory objMongo = new UserFactory(new UserImplMongo());
 	
-	objMongo.getInsertarUsuario();
-	objMongo.getEliminarUsuario(1);
+	objMongo.getInsertrUser();
+	objMongo.getDeleteUser(1);
 	
 	}
 	
