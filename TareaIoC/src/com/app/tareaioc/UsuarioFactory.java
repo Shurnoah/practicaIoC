@@ -2,12 +2,18 @@ package com.app.tareaioc;
 
 public class UsuarioFactory {
 	
+	IUsuario usr;
+	
+	public UsuarioFactory(IUsuario usr) {
+		this.usr=usr;
+	}
+	
 	public void getInsertarUsuario() {
-		System.out.println("Insertar usuario");
+		usr.insertarUsuario();
 	}
 	
 	public void getEliminarUsuario(int id) {
-		System.out.println("Eliminar usuario: "+id);
+		usr.eliminarUsuario(id);
 	}
 	
 }
